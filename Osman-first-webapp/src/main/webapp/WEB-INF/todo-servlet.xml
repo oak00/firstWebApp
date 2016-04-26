@@ -6,8 +6,10 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
+		<!-- Searches package for @Service annotations -->
         <context:component-scan base-package="person.Osman" /> 
 
+		<!-- Affixes prefix and suffix to view pages -->
   		<bean
         	class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         	<property name="prefix">
