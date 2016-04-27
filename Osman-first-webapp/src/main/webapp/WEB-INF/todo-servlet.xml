@@ -20,7 +20,7 @@
         	</property>
     	</bean>
 
-
+		<mvc:resources mapping="/webjars/**" location="/webjars/"/>
         <mvc:annotation-driven />
 
     </beans>
