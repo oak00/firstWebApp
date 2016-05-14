@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [12/May/2016:19:26:14 -0500] "GET /login HTTP/1.1" 200 954 http-bio-8080-exec-1 3533
+0:0:0:0:0:0:0:1 - - [12/May/2016:19:26:15 -0500] "GET /webjars/jquery/1.9.1/jquery.min.js HTTP/1.1" 200 92629 http-bio-8080-exec-3 231
+0:0:0:0:0:0:0:1 - - [12/May/2016:19:26:15 -0500] "GET /webjars/bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1" 200 121260 http-bio-8080-exec-2 521
+0:0:0:0:0:0:0:1 - - [12/May/2016:19:26:15 -0500] "GET /webjars/bootstrap/3.3.6/js/bootstrap.min.js HTTP/1.1" 200 36868 http-bio-8080-exec-4 535
+0:0:0:0:0:0:0:1 - - [12/May/2016:19:26:16 -0500] "GET /webjars/bootstrap/3.3.6/css/bootstrap.min.css.map HTTP/1.1" 200 54416 http-bio-8080-exec-7 613

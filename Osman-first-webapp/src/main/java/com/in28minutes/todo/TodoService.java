@@ -1,4 +1,4 @@
-package person.Osman.todo;
+package com.in28minutes.todo;
 
 import java.util.ArrayList;
 import java.util.Date;

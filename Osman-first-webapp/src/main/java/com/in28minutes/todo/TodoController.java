@@ -1,4 +1,4 @@
-package person.Osman.todo;
+package com.in28minutes.todo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -33,13 +33,17 @@ public class TodoController {
 
 	@RequestMapping(value="/list-todos", method= RequestMethod.GET)
 	public String listToDos(ModelMap model){
-		model.addAttribute("todos", service.retrieveTodos("in28Minutes"));
+		model.addAttribute("todos", service.retrieveTodos(retrieveLoggedinUserName()));
 		return "list-todos";
+	}
+
+	private String retrieveLoggedinUserName() {
+		return "in28Minutes";
 	}
 	
 	@RequestMapping(value="/add-todo", method= RequestMethod.GET)
 	public String showToDoPage(ModelMap model){
-		model.addAttribute("todo",new Todo(0,"in28Minutes","",new Date(), false));
+		model.addAttribute("todo",new Todo(0,retrieveLoggedinUserName(),"",new Date(), false));
 		return "todo";
 	}
 	
@@ -48,7 +52,7 @@ public class TodoController {
 		if(result.hasErrors()){ //Validation
 			return "todo";
 		}
-		service.addTodo("in28Minutes", todo.getDesc(), new Date(), false);
+		service.addTodo(retrieveLoggedinUserName(), todo.getDesc(), new Date(), false);
 		model.clear(); //removes session values from url
 		return "redirect:list-todos"; // redirects to /list-todos page with established model
 	}
@@ -74,7 +78,7 @@ public class TodoController {
 		if(result.hasErrors()){ //Validation
 			return "todo";
 		}
-		todo.setUser("in28Minutes");
+		todo.setUser(retrieveLoggedinUserName());
 		model.clear();
 		service.updateTodo(todo);
 		return "redirect:list-todos";
