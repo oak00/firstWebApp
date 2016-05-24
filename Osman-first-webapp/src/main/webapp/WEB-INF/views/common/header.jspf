@@ -4,7 +4,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 	<head>
-		<title>Yahoo!!</title>
+		<title><spring:message code="title.caption"/></title>
 			<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
       			  rel="stylesheet">
 	</head>

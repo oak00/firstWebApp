@@ -4,11 +4,11 @@
     </div>
     <div class="navbar-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li class="active"><a href="/list-todos">Todos</a></li>
+            <li><a href="/"><spring:message code="nav-home.caption"/></a></li>
+            <li class="active"><a href="/list-todos"><spring:message code="nav-list.caption"/></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/logout"><spring:message code="nav-logout.caption"/></a></li>
         </ul>
     </div>
 </nav>
